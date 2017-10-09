@@ -1,0 +1,59 @@
+html, body, #app, .fullHeight{
+    min-height: 100% !important;
+    height: 100%;
+    background-color: #FCFBE3;
+}
+.configParentDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.configDiv{
+    padding-left: 50px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0px 15px;
+}
+
+.btn:disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}
+
+.btn-start{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-stop{
+    color: #fff;
+    background-color: #d58512;
+    border-color: #985f0d;
+}
+
+.btn-toggle{
+    color: #fff;
+    background-color: #5BC0DE;
+    border-color: #5BC0DE;
+}
+
+.lineChart{
+    position: relative;
+    height: 40vh;
+    width: 75vw; 
+}
