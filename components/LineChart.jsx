@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from "react-dom";
 import Chart from "chart.js";
 
@@ -6,9 +6,9 @@ import Chart from "chart.js";
  * LineChart component for creating chart.js graph
  */
 export default class LineChart extends React.Component {
-     /**
-     * constructor
-     */
+    /**
+    * constructor
+    */
     constructor() {
         super();
         /**
@@ -27,7 +27,7 @@ export default class LineChart extends React.Component {
         let el = ReactDOM.findDOMNode(this.refs.chart);
         let ctx = el.getContext("2d");
         this.state.chart = new Chart(ctx, {
-            type: 'line',
+            type: "line",
             data: nextProps.data,
             options: nextProps.options
         });
@@ -37,22 +37,22 @@ export default class LineChart extends React.Component {
      */
     componentDidMount() {
         this.initializeChart(this.props);
-    };
+    }
 
     /**
      * When component is unmounted delete the chart
      */
     componentWillUnmount() {
-        var chart = this.state.chart;
+        const chart = this.state.chart;
         chart.destroy();
-    };
+    }
 
     /**
      * will update the chart if the props of the component change
      * @param {object} nextProps would have updated data and options for the chart 
      */
     componentWillReceiveProps(nextProps) {
-        var chart = this.state.chart;
+        const chart = this.state.chart;
         // assign all of the properites from the next datasets to the current chart
         nextProps.data.datasets.forEach(function (set, setIndex) {
             const chartDataset = {};
@@ -65,7 +65,7 @@ export default class LineChart extends React.Component {
         });
         chart.data.labels = nextProps.data.labels;
         chart.update();
-    };
+    }
 
     /**
      * renders the chart.js chart

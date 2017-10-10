@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import ReactSpeedometer from "react-d3-speedometer";
 import LineChart from "./components/LineChart.jsx";
 import { chartDataSet, chartOptions } from "./helpers/DataHelper";
@@ -56,7 +56,7 @@ export default class App extends React.Component {
                     options={chartOptions}
                 />
             </div>
-        )
+        );
     }
 }
 

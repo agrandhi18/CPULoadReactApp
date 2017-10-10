@@ -1,9 +1,9 @@
 var config = {
-    entry: './main.js',
+    entry: "./main.js",
 
     output: {
-        path: '/',
-        filename: 'index.js'
+        path: "/",
+        filename: "index.js"
     },
 
     resolve: {
@@ -14,19 +14,9 @@ var config = {
     },
 
     devServer: {
-        host: 'localhost',
+        host: "localhost",
         inline: true,
-        port: 8080,
-        proxy: {
-            proxy: {
-                '/api/**': {
-                    target: '"http://localhost:1337/'
-                }
-            }
-
-        }
-
-
+        port: 8090
     },
 
     module: {
@@ -34,14 +24,14 @@ var config = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                loader: "babel-loader",
 
                 query: {
-                    presets: ['es2015', 'react']
+                    presets: ["es2015", "react"]
                 }
             }
         ]
     }
-}
+};
 
 module.exports = config;
