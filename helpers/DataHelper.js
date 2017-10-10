@@ -2,22 +2,22 @@
  * Generates random color which can be used duing "per core level" view of the chart
  */
 export const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (var i = 0; i < 6; i++) {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-}
+};
 
 /**
- * List of colors which can be used duing "per core level" view of the chart, if the cores are more than
- * 10, system uses "getRandomColor" function to generate color
+ * List of colors which can be used duing "per core level" view of the chart, if the cores
+ * are more than 10, system uses "getRandomColor" function to generate color
  */
-export const colorList = ["#F9A1B5", "#59D044", "#5BB0E5", "#ECD2D8", "#FE787C", "#F08838", "#813B7C", "#F3A002", "#F2F44D", "#F24D98"]
+export const colorList = ["#F9A1B5", "#59D044", "#5BB0E5", "#ECD2D8", "#FE787C", "#F08838", "#813B7C", "#F3A002", "#F2F44D", "#F24D98"];
 
 /**
- * DataSet template used for creating dynamic datasets 
+ * DataSet template used for creating dynamic datasets
  */
 export const dataSetRef = {
     label: "Aggregated system core's Load",
@@ -28,10 +28,10 @@ export const dataSetRef = {
     borderDash: [],
     borderDashOffset: 0.0,
     borderWidth: 2,
-    borderJoinStyle: 'miter',
+    borderJoinStyle: "miter",
     pointBorderWidth: 1,
-    data: Array(60).fill(null)
-}
+    data: Array(60).fill(null),
+};
 
 /**
  * The chartData set which can be used for loading chart data values
@@ -46,25 +46,25 @@ export const chartDataSet = {
             lineTension: 0.2,
             backgroundColor: colorList[0],
             borderColor: colorList[0],
-            //borderCapStyle: 'butt',
+            //borderCapStyle: "butt",
             borderDash: [],
             borderDashOffset: 0.0,
             borderWidth: 2,
-            borderJoinStyle: 'miter',
+            borderJoinStyle: "miter",
             pointBorderWidth: 1,
-            data: Array(60).fill(null)
-         }
+            data: Array(60).fill(null),
+        }
     ]
 };
 
 /**
- * Chart options which are used for loading 'chart.js' chart
+ * Chart options which are used for loading "chart.js" chart
  */
 export const chartOptions = {
     showLines: true,
     animation: false,
     tooltips: {
-        enabled: false
+        enabled: false,
     },
     responsive: true,
     scales: {
@@ -78,27 +78,27 @@ export const chartOptions = {
             scaleLabel: {
                 display: true,
                 labelString: "Load percentage (%)",
-                fontFamily: 'Helvetica Neue',
-                fontSize: 20
+                fontFamily: "Helvetica Neue",
+                fontSize: 20,
             },
             gridLines: {
-                drawTicks: false
+                drawTicks: false,
             }
         }],
         xAxes: [{
             gridLines: {
                 display: true,
-                drawTicks: false
+                drawTicks: false,
             },
             scaleLabel: {
                 display: true,
                 labelString: "Current Time(mm::ss)",
-                fontFamily: 'Helvetica Neue',
-                fontSize: 20
+                fontFamily: "Helvetica Neue",
+                fontSize: 20,
             },
             ticks: {
-                padding: 10
-            }
-        }]
-    }
-}
+                padding: 10,
+            },
+        }],
+    },
+};
